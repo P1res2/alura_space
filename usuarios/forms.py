@@ -8,7 +8,7 @@ class LoginForms(forms.Form):
         widget=forms.TextInput(
             attrs={
                 'class':'form-control',
-                'placeholder':'Ex: Gabriel Silva',
+                'placeholder':'Ex: Gabriel Pires Araujo',
             }
         )
     )
@@ -25,7 +25,7 @@ class LoginForms(forms.Form):
     )
     
 class CadastroForms(forms.Form):
-    nome_completo = forms.CharField(
+    nome_cadastro = forms.CharField(
         label='Nome Completo',
         required=True,
         max_length=120,
@@ -46,7 +46,7 @@ class CadastroForms(forms.Form):
             }
         )
     )
-    senha1 = forms.CharField(
+    senha_1 = forms.CharField(
         label='Senha',
         required=True,
         max_length=70,
@@ -57,3 +57,15 @@ class CadastroForms(forms.Form):
             }
         )
     )
+    senha_2 = forms.CharField(
+        label='Confime sua senha',
+        required=True,
+        max_length=70,
+        widget=forms.PasswordInput(
+            attrs={
+                'class':'form-control',
+                'placeholder':'Digite sua senha novamente',
+            }
+        )
+    )
+    
